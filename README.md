@@ -13,7 +13,7 @@ An Asynchronous FIFO (First-In, First-Out) is a type of data buffer or queue use
 
 ![Screenshot 2024-10-06 124319](https://github.com/user-attachments/assets/fc8b990b-6d37-470d-a6de-c5b8a2ffe7b3)
 
-### Asynchronous FIFO Design Considerations:
+# Asynchronous FIFO Design Considerations:
 - **Clock Domain Crossing:** The design allows for writing and reading operations to occur independently, which is crucial in systems where different components operate at different clock frequencies. Proper handling of clock domain crossing ensures reliable data transfer without data loss.
 
 - **Latency:** The asynchronous FIFO is designed to handle data with minimal latency while ensuring that data integrity is maintained during transfer between clock domains.
