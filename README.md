@@ -60,13 +60,13 @@ An Asynchronous FIFO (First-In, First-Out) is a type of data buffer or queue use
 ### Clock Domain Crossing:
 In an asynchronous FIFO, the read and write operations are governed by independent clock signals. This design allows for efficient data transfer across clock boundaries, ensuring that data integrity is maintained even when clock frequencies differ.
 
-### FIFO Control Signals:
+## FIFO Control Signals:
 - **Write Enable (wr_en):** This signal, when asserted, allows data to be written into the FIFO on the rising edge of the write clock.
 - **Read Enable (rd_en):** This signal, when asserted, allows data to be read from the FIFO on the rising edge of the read clock.
 - **Full Flag:** This status signal indicates that the FIFO is full, preventing further write operations until space is created by reading data out.
 - **Empty Flag:** This status signal indicates that the FIFO is empty, preventing further read operations until new data is written.
 
-### Operation:
+## Operation:
 - **Writing Data:** Data is written into the FIFO when the write enable signal is asserted. The write pointer advances to the next location after each write (write_data).
 - **Reading Data:** Data is read out of the FIFO when the read enable signal is asserted. The read pointer advances to the next location after each read (read_data).
 - **Status Flags:** The full and empty flags prevent invalid operations and help manage data flow efficiently across different clock domains.
@@ -77,23 +77,23 @@ In an asynchronous FIFO, the read and write operations are governed by independe
 - **Design Language:** Verilog
 - **Design Type:** Asynchronous FIFO with Parameterized Depth and Width
 
-### Key Components
+# Key Components
 - **Control Logic:** Manages the reading and writing of data based on input signals (write_data, read_data, wr_en, and rd_en).
 - **Memory Array:** Utilizes dual-port RAM to store FIFO data, allowing concurrent read and write operations.
 - **Pointer Management:** Read and write pointers control access to the FIFO memory, ensuring correct data sequencing and clock domain crossing.
 
-## Output
+# Output
 ![Screenshot 2024-10-06 121543](https://github.com/user-attachments/assets/6bd797a4-615f-4119-b830-37a00d66dafa)
   
 ![Screenshot 2024-10-06 122306](https://github.com/user-attachments/assets/36254db5-343e-4b57-87ae-4f431f0941e2) 
 
 ![Screenshot 2024-10-06 121600](https://github.com/user-attachments/assets/fb55a3ac-7a5f-46ad-85fa-7562f5e70a20) 
 
-## Future Work/Enhancements:
+# Future Work/Enhancements:
 While this project focuses on an asynchronous FIFO, future enhancements could include the development of more advanced features such as:
 - **Error Detection and Correction:** Implementing mechanisms for detecting and correcting errors that may occur during data transfer between clock domains.
 - **Dynamic Resizing:** Allowing the FIFO depth to change dynamically based on system requirements without requiring a redesign.
 - **Integration with Other Components:** Exploring how the asynchronous FIFO can be integrated with other digital components for enhanced functionality and performance.
 
-## Contributing
+# Contributing
 Feel free to open issues, suggest improvements, or contribute to the code. Your feedback and contributions are welcome!
